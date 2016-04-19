@@ -1,0 +1,18 @@
+group 'benko'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.sparkjava:spark-core:2.3'
+    compile 'com.j256.ormlite:ormlite-core:4.48'
+    compile 'com.j256.ormlite:ormlite-jdbc:3.4'
+    compile 'org.thymeleaf:thymeleaf:2.1.4.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
