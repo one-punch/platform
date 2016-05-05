@@ -13,6 +13,7 @@ public class App {
         DatabaseConfig.buildDatabaseConfig();
         try {
             Manager.buildDaoManager();
+            
         } catch (SQLException e) {
             e.printStackTrace();
         }
