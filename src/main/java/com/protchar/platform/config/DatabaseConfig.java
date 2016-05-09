@@ -5,6 +5,8 @@ import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.protchar.platform.util.Tools;
 
+import java.sql.SQLException;
+
 /**
  * Created by apple on 16/4/30.
  */
@@ -15,7 +17,11 @@ public class DatabaseConfig {
     public DatabaseConfig() {
         config = Tools.loadConfig(System.getProperty("user.dir") + "/config.json");
         String url = connectionString(config.getAsJsonObject("database"));
-        connectionSource = new JdbcConnectionSource(url);
+        try {
+            connectionSource = new JdbcConnectionSource(url);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public static String connectionString(JsonObject databaseConfig) {
