@@ -4,3 +4,5 @@ build/
 gradle/*
 *.example
 *.iml
+local.properties
+**/.DS_Store
