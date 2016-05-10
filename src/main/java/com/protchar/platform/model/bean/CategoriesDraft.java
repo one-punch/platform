@@ -1,4 +1,4 @@
-package model;
+package com.protchar.platform.model.bean;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

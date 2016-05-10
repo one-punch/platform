@@ -1,4 +1,4 @@
-package model;
+package com.protchar.platform.model.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
