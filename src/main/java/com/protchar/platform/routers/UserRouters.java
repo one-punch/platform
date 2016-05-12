@@ -1,7 +1,11 @@
 package com.protchar.platform.routers;
 
+import com.protchar.platform.model.bean.User;
 import spark.ModelAndView;
 import spark.template.thymeleaf.ThymeleafTemplateEngine;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static spark.Spark.get;
 
@@ -13,11 +17,12 @@ public class UserRouters extends Base {
         super();
     }
 
-    void setupRoutes() {
+    public void setupRoutes() {
 
-        get("/", (req, res) -> {
+        get("/admin", (req, res) -> {
+            Map<String,Object> map = new HashMap<>();
 
-            return new ModelAndView(null, "index");
+            return new ModelAndView(map, "admin/index");
         }, new ThymeleafTemplateEngine());
 
         get("/user/:id", (req, res) -> {

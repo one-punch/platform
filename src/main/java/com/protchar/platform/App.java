@@ -2,6 +2,7 @@ package com.protchar.platform;
 
 import com.protchar.platform.config.DatabaseConfig;
 import com.protchar.platform.dao.Manager;
+import com.protchar.platform.routers.UserRouters;
 
 import java.sql.SQLException;
 
@@ -16,6 +17,6 @@ public class App {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        (new UserRouters()).setupRoutes()
+        (new UserRouters()).setupRoutes();
     }
 }
