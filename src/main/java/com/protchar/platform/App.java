@@ -16,5 +16,6 @@ public class App {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        (new UserRouters()).setupRoutes()
     }
 }
