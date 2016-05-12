@@ -14,6 +14,12 @@ public class UserRouters extends Base {
     }
 
     void setupRoutes() {
+
+        get("/", (req, res) -> {
+
+            return new ModelAndView(null, "index");
+        }, new ThymeleafTemplateEngine());
+
         get("/user/:id", (req, res) -> {
 
             return new ModelAndView(null, "testpage");
