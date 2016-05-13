@@ -44,7 +44,9 @@ public class ThymeleafTemplateEngine extends TemplateEngine {
         defaultTemplateResolver.setTemplateMode("XHTML");
         defaultTemplateResolver.setPrefix("templates/");
         defaultTemplateResolver.setSuffix(".html");
-        defaultTemplateResolver.setCacheTTLMs(3600000L);
+//        defaultTemplateResolver.setCacheTTLMs(3600000L);
+        defaultTemplateResolver.setCacheable(false);
+        defaultTemplateResolver.setTemplateMode("LEGACYHTML5");
 
         defaultTemplateResolver.setResourceResolver(new ClassLoaderResourceResolver());
 
