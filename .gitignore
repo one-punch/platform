@@ -7,3 +7,4 @@ gradle/*
 local.properties
 **/.DS_Store
 src/main/resources/public/bower_components/
+node_modules/
