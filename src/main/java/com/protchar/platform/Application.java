@@ -3,20 +3,19 @@ package com.protchar.platform;
 /**
  * Created by hmbin on 16/5/13.
  */
+import com.protchar.platform.config.DatabaseConfig;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
 public class Application {
-
-    @Bean
-    public Java8TimeDialect java8TimeDialect() {
-        return new Java8TimeDialect();
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class);
+        DatabaseConfig.buildDatabaseConfig();
     }
 }

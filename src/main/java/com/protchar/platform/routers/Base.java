@@ -5,9 +5,5 @@ package com.protchar.platform.routers;
  */
 public abstract class Base {
 
-    public Base() {
-        setupRoutes();
-    }
-
-    abstract void setupRoutes();
+    public Base(){};
 }
