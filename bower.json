@@ -17,6 +17,16 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.6",
-    "material-design-iconic-font": "~2.2.0"
+    "material-design-iconic-font": "~2.2.0",
+    "gnob": "knob#^0.1.11",
+    "sparkline": "^2.1.2",
+    "nanoscroller": "^0.8.7",
+    "rickshaw": "^1.5.1",
+    "autosize": "^3.0.15",
+    "moment": "^2.13.0",
+    "spin": "^1.1.6",
+    "jquery-migrate": "^1.4.0",
+    "respond": "Respond#^1.4.2",
+    "html5shiv": "^3.7.3"
   }
 }
