@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <groups xmlns="http://www.isdc.ro/wro">
     <group name="admin">
-        <css minimize="false">classpath:/public/bower_components/bootstrap/dist/css/bootstrap.min.css</css>
-        <js minimize="false">classpath:/public/bower_components/bootstrap/dist/js/bootstrap.min.css</js>
+        <css>/public/bower_components/bootstrap/dist/css/bootstrap.min.css</css>
+        <js>/public/bower_components/bootstrap/dist/js/bootstrap.min.css</js>
     </group>
 </groups>
