@@ -72,6 +72,10 @@ clientDependencies {
             include 'jquery.js'
             include 'jquery.min.js'
         }
+        'bootstrap'('3.3.6', from:'dist') {
+            include 'css/bootstrap.min.css'
+            include 'js/bootstrap.min.js'
+        }
     }
 }
 
