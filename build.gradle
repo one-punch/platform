@@ -7,10 +7,12 @@ buildscript {
     }
     repositories {
         mavenCentral()
-        mavenLocal();
+        mavenLocal()
+        maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("gradle.plugin.com.boxfuse.client:flyway-release:4.0")
     }
 }
 
@@ -18,6 +20,8 @@ apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+apply plugin: 'org.flywaydb.flyway'
+
 
 sourceCompatibility = 1.8
 
@@ -38,6 +42,7 @@ dependencies {
     compile 'com.google.code.gson:gson:1.7.2'
     compile 'mysql:mysql-connector-java:5.1.38'
     compile 'javax.persistence:persistence-api:1.0.2'
+    compile "org.flywaydb:flyway-core:4.0"
     testCompile group: 'junit', name: 'junit', version: '4.11'
     testCompile "org.springframework.boot:spring-boot-starter-test"
 }
@@ -50,3 +55,11 @@ task copyResources(type: Copy) {
     into "${buildDir}/classes"
 }
 processResources.dependsOn copyResources
+
+
+flyway {
+    driver = 'com.mysql.jdbc.Driver'
+    url = 'jdbc:mysql://localhost:3306/platform'
+    user = 'root'
+    password = '123456'
+}
