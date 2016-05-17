@@ -16,4 +16,9 @@ class HomeController extends Base{
         return "index";
     }
 
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    String admin_index(Model model) {
+        return "admin/index";
+    }
+
 }
