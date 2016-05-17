@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan
+@ComponentScan({"com.protchar.platform.routers", "asset.pipeline.springboot"})
 public class Application extends WebMvcConfigurerAdapter {
 
     public static void main(String[] args) {

@@ -6,5 +6,6 @@ gradle/*
 *.iml
 local.properties
 **/.DS_Store
-src/main/webapp/public/bower_components/
 node_modules/
+src/assets/vendor
+src/main/webapp/public/bower_components/
