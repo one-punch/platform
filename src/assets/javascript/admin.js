@@ -1,2 +1,2 @@
 //= wrapped
-//= require /jquery/jquery.min.js
+//= require /lib/jquery.min.js
