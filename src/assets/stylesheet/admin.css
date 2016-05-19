@@ -3,5 +3,6 @@
 *= require "/admin/materialadmin.css"
 *= require "/font-awesome/font-awesome.min.css"
 *= require "/material-design-iconic-font/css/material-design-iconic-font.min.css
+*= require "/rickshaw/rickshaw.css"
 *= require "/admin/morris.core.css"
 */

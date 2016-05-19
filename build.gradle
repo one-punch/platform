@@ -114,7 +114,10 @@ clientDependencies {
             include 'font-awesome.min.css'
         }
 
-//        'rickshaw'('1.5.1')
+        'rickshaw'('1.5.1'){
+            include 'rickshaw.min.js'
+            include 'rickshaw.min.css'
+        }
 
     }
 }
