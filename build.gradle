@@ -5,6 +5,7 @@ buildscript {
     repositories {
         mavenCentral()
         mavenLocal()
+        maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -14,10 +15,6 @@ buildscript {
     }
 }
 
-plugins {
-    id 'com.craigburke.client-dependencies' version '1.0.0-RC2'
-}
-
 apply plugin: 'groovy'
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -25,7 +22,7 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin: 'asset-pipeline'
 apply plugin: 'org.flywaydb.flyway'
-apply plugin: 'war'
+//apply plugin: 'war'
 
 repositories {
     mavenCentral()
@@ -61,60 +58,6 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
-}
-
-clientDependencies {
-    bower {
-        'jquery'('2.2.3', from:'dist') {
-            include 'jquery.min.js'
-            include 'jquery.slim.min.js'
-        }
-        'bootstrap'('3.3.6', from:'dist') {
-            include 'css/bootstrap.min.css'
-            include 'js/bootstrap.min.js'
-        }
-        'gnob'('0.1.11') {
-            include 'gnob.css'
-            include 'gnob.js'
-        }
-        'material-design-iconic-font'('2.2.0', from:'dist') {
-            include 'css/material-design-iconic-font.min.css'
-        }
-        'autosize'('3.0.15', from:'dist') {
-            include 'autosize.min.js'
-        }
-        'html5shiv'('3.7.3', from:'dist') {
-            include 'html5shiv.min.js'
-            include 'html5shiv-printshiv.min.js'
-        }
-        'moment'('2.13.0', from:'min') {
-            include 'locales.min.js'
-            include 'moment.min.js'
-            include 'moment-with-locales.min.js'
-        }
-        'respond'('1.4.2', from:'dest') {
-            include 'respond.min.js'
-        }
-        'jquery-migrate'('1.4.0') {
-            include 'jquery-migrate.min.js'
-        }
-        'spin'('1.1.6') {
-            include 'javascripts/jquery.spin.js'
-        }
-        'jquery-knob'('1.2.11', from:'dist') {
-            include 'jquery.knob.min.js'
-        }
-        'nanoscroller'('0.8.7', from:'bin/javascript') {
-            include 'jquery.nanoscroller.min.js'
-        }
-        'font-awesome'('4.6.1', from:'css') {
-            include 'font-awesome.min.css'
-        }
-        'rickshaw'('1.5.1'){
-            include 'rickshaw.min.js'
-            include 'rickshaw.min.css'
-        }
-    }
 }
 
 assets {

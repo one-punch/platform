@@ -1,8 +1,8 @@
-/*
-*= require "/bootstrap/css/bootstrap.min.css"
-*= require "/admin/materialadmin.css"
-*= require "/font-awesome/font-awesome.min.css"
-*= require "/material-design-iconic-font/css/material-design-iconic-font.min.css
-*= require "/rickshaw/rickshaw.css"
-*= require "/admin/morris.core.css"
+/*= wrapped
+*= require /admin/bootstrap.css
+*= require /admin/materialadmin.css
+*= require /admin/font-awesome.min.css
+*= require /admin/material-design-iconic-font.min.css
+*= require /admin/rickshaw.css
+*= require /admin/morris.core.css
 */
