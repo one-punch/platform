@@ -68,33 +68,51 @@ task wrapper(type: Wrapper) {
 
 clientDependencies {
     bower {
-        'jquery'('2.2.x', from:'dist', into:'lib') {
+        'jquery'('2.2.x', from:'dist') {
             include 'jquery.min.js'
             include 'jquery.slim.min.js'
         }
-        'bootstrap'('3.3.6', from:'dist', into:'lib') {
-            include 'css/bootstrap.min.css'
-            include 'js/bootstrap.min.js'
-        }
-        'gnob'('knob#^0.1.11', into:'lib') {
-            include 'gnob.css'
-            include 'gnob.js'
-        }
-        'material-design-iconic-font'('~2.2.0', from:'dist', into:'lib') {
-            include 'css/material-design-iconic-font.min.css'
-        }
-        'autosize'('^3.0.15', from:'dist', into:'lib') {
-            include 'autosize.min.js'
-        }
-        'html5shiv'('^3.7.3', from:'dist', into:'lib') {
-            include 'html5shiv.min.js'
-            include 'html5shiv-printshiv.min.js'
-        }
-        'moment'('^3.7.3', from:'min', into:'lib') {
-            include 'locales.min.js'
-            include 'moment.min.js'
-            include 'moment-with-locales.min.js'
-        }
+//        'bootstrap'('3.3.6', from:'dist') {
+//            include 'css/bootstrap.min.css'
+//            include 'js/bootstrap.min.js'
+//        }
+//        'gnob'('0.1.11') {
+//            include 'gnob.css'
+//            include 'gnob.js'
+//        }
+//        'material-design-iconic-font'('2.2.0', from:'dist') {
+//            include 'css/material-design-iconic-font.min.css'
+//        }
+//        'autosize'('3.0.15', from:'dist') {
+//            include 'autosize.min.js'
+//        }
+//        'html5shiv'('3.7.3', from:'dist') {
+//            include 'html5shiv.min.js'
+//            include 'html5shiv-printshiv.min.js'
+//        }
+//        'moment'('2.13.0', from:'min') {
+//            include 'locales.min.js'
+//            include 'moment.min.js'
+//            include 'moment-with-locales.min.js'
+//        }
+//        'respond'('1.4.2', from:'dest') {
+//            include 'respond.min.js'
+//        }
+//        'jquery-migrate'('1.4.0') {
+//            include 'jquery-migrate.min.js'
+//        }
+//        'spin'('1.1.6') {
+//            include 'javascripts/jquery.spin.js'
+//        }
+//        'jquery-knob'('1.2.13', from:'dist') {
+//            include 'jquery.knob.min.js'
+//        }
+//        'nanoscroller'('0.8.7', from:'bin/javascript') {
+//            include 'jquery.nanoscroller.min.js'
+//        }
+
+//        'rickshaw'('1.5.1')
+
     }
 }
 
