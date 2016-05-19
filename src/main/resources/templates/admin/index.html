@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/admin">
-<body class="menubar-hoverable header-fixed">
-<!-- BEGIN HEADER-->
-<header id="header" th:replace="partials/header"></header>
-<!-- END HEADER-->
-
-<!-- BEGIN BASE-->
-<div id="base">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/admin"
+      xmlns:layout="http://www.w3.org/1999/xhtml">
+<body class="menubar-hoverable header-fixed" layout:fragment="content">
+    <div id="base">
     <!-- BEGIN OFFCANVAS LEFT -->
     <div class="offcanvas">
     </div><!--end .offcanvas-->
@@ -570,12 +566,6 @@
     </div><!--end .offcanvas-->
     <!-- END OFFCANVAS RIGHT -->
 
-</div><!--end #base-->
-<!-- END BASE -->
-
-<footer id="footer" th:replace="partials/footer"></footer>
-
-
-
+</div>
 </body>
 </html>
