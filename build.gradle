@@ -5,7 +5,6 @@ buildscript {
     repositories {
         mavenCentral()
         mavenLocal()
-        maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -31,9 +30,7 @@ apply plugin: 'war'
 repositories {
     mavenCentral()
     mavenLocal()
-    maven { url "https://repo.grails.org/grails/core" }
     jcenter()
-    maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 sourceCompatibility = 1.8
@@ -68,7 +65,7 @@ task wrapper(type: Wrapper) {
 
 clientDependencies {
     bower {
-        'jquery'('2.2.x', from:'dist') {
+        'jquery'('2.2.3', from:'dist') {
             include 'jquery.min.js'
             include 'jquery.slim.min.js'
         }
@@ -104,21 +101,19 @@ clientDependencies {
         'spin'('1.1.6') {
             include 'javascripts/jquery.spin.js'
         }
-        'jquery-knob'('1.2.13', from:'dist') {
+        'jquery-knob'('1.2.11', from:'dist') {
             include 'jquery.knob.min.js'
         }
         'nanoscroller'('0.8.7', from:'bin/javascript') {
             include 'jquery.nanoscroller.min.js'
         }
-        'font-awesome'('4.6.3', from:'css') {
+        'font-awesome'('4.6.1', from:'css') {
             include 'font-awesome.min.css'
         }
-
         'rickshaw'('1.5.1'){
             include 'rickshaw.min.js'
             include 'rickshaw.min.css'
         }
-
     }
 }
 
