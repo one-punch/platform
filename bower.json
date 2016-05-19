@@ -27,6 +27,7 @@
     "jquery-migrate": "^1.4.0",
     "respond": "Respond#^1.4.2",
     "html5shiv": "^3.7.3",
-    "jquery-knob": "^1.2.13"
+    "jquery-knob": "^1.2.13",
+    "font-awesome": "^4.6.3"
   }
 }
